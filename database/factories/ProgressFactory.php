@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Offer;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,7 +19,7 @@ class ProgressFactory extends Factory
     {
         return [
             'comentary' => $this->faker->text(),
-            'id_offer' => Offer::all()->random()->id,
+            'offer_id' => Offer::all()->random()->id,
         ];
     }
 }

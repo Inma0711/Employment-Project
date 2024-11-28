@@ -19,11 +19,10 @@ class OfferFactory extends Factory
         return [
             'title' => $this->faker->title(),
             'company' => $this->faker->company(),
-            'offerStatus' =>$this->faker->randomElement([
-                'Enviado',      
-                'Visto',        
-                'Entrevista',  
-                'Denegado',
+            'offerStatus' => $this->faker->randomElement([
+                "En proceso", 
+                "Aceptado", 
+                "Denegado"
             ]),
         ];
     }
