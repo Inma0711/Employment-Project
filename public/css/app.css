@@ -1,9 +1,12 @@
 @import url(header.css);
 @import url(footer.css);
-
+@import url(home.css);
 :root {
-  --blue: #17a6d7;
+  --darkBlue: #0b3146;
+  --blue: #0a6f9a;
   --white: aliceblue;
+  --lightBlue: #bde8fa;
+  --hoverColor: #83d7f6;
 }
 
 * {
@@ -21,7 +24,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 70vh;
+    align-items: center;
 }
 
 
