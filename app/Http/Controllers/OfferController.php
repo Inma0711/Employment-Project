@@ -61,6 +61,6 @@ class OfferController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+      
     }
 }
