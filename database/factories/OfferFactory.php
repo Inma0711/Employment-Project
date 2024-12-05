@@ -16,8 +16,11 @@ class OfferFactory extends Factory
      */
     public function definition(): array
     {
+        static $id = 1; 
+
         return [
-            'title' => $this->faker->title(),
+            'id' => $id++, 
+            'title' => $this->faker->jobTitle(),
             'company' => $this->faker->company(),
             'offerStatus' => $this->faker->randomElement([
                 "En proceso", 

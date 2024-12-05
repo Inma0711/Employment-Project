@@ -30,7 +30,13 @@ class OfferController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $offer = Offer::create([
+            'title' => $request->title,
+            'company' => $request->company,
+            'offerStatus' => $request->offerStatus,
+        ]);
+        $offer->save();
+        return response()->json($offer, 200);
     }
 
     /**
@@ -54,7 +60,15 @@ class OfferController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $offer = Offer::find($id);
+        $offer->update([
+            'title' => $request->title,
+            'company' => $request->company,
+            'offerStatus' => $request->offerStatus
+        ]);
+
+        $offer->save();
+        return response()->json($offer, 200);
     }
 
     /**

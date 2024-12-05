@@ -3,6 +3,7 @@
     <table>
         <thead>
             <tr>
+                <th>Id</th>
                 <th>Title</th>
                 <th>Company</th>
                 <th>Offer Status</th>
@@ -11,6 +12,7 @@
         <tbody>
             @foreach ($offers as $offer)
                 <tr class="offerTr">
+                    <td>{{ $offer->id }}</td>
                     <td>{{ $offer->title }}</td>
                     <td>{{ $offer->company }}</td>
                     <td>{{ $offer->offerStatus }}</td>
