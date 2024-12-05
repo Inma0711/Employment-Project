@@ -43,6 +43,33 @@ class OfferTest extends TestCase
 
         $response = $this->get(route('apihome'));
         $response->assertStatus(200)
-                 ->assertJsonCount(1);
+            ->assertJsonCount(1);
+    }
+
+    public function test_CheckIfCanUpdateEntryInOfferWithJsonFile()
+    {
+        $response = $this->post(route('apistore'), [
+            'title' => 'Junior Java',
+            'company' => 'La presa',
+            'offerStatus' => 'Aceptado'
+        ]);
+
+        $data = ['title' => "Junior Java"];
+        $response = $this->get(route('apihome'));
+        $response->assertStatus(200)
+            ->assertJsonCount(1)
+            ->assertJsonFragment($data);
+
+        $response = $this->put(route('apiupdate', 1), [
+            'title' => 'Ingeniero',
+            'company' => 'Empresita',
+            'offerStatus' => 'Denegado'
+        ]);
+
+        $data = ['title' => "Ingeniero"];
+        $response = $this->get(route('apihome'));
+        $response->assertStatus(200)
+            ->assertJsonCount(1)
+            ->assertJsonFragment($data);
     }
 }
