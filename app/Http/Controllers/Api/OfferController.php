@@ -17,19 +17,6 @@ class OfferController extends Controller
         return response()->json($offers, 200);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    /*
-    public function create()
-    {
-        //
-    }
-    */
-
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $offer = Offer::create([
@@ -41,25 +28,12 @@ class OfferController extends Controller
         return response()->json($offer, 200);
     }
 
-    /**
-     * Display the specified resource.
-     */
-    /* public function show(string $id)
+    public function show(string $id)
     {
-        //
-    } */
+        $offer = Offer::with('progresses')->findOrFail($id);
+        return response()->json($offer, 200);
+    }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    /* public function edit(string $id)
-    {
-        //
-    } */
-
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
         $offer = Offer::find($id);
@@ -73,9 +47,6 @@ class OfferController extends Controller
         return response()->json($offer, 200);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
         $offers = Offer::find($id);

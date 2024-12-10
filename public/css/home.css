@@ -1,5 +1,5 @@
 table {
-    width: 80%;
+    width: 40%;
     margin-top: 2%;
     border-collapse: collapse;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
@@ -22,17 +22,16 @@ tbody {
     width: 100%;
     max-height: 58vh;
     overflow-y: auto;
-    cursor: pointer;
 }
 
 th {
-    min-width: 50vh;
+    min-width: 30vh;
     text-align: center;
 }
 
 td {
-    max-width: 100vh;
-    min-width: 50vh;
+    max-width: 30vh;
+    min-width: 30vh;
     text-align: center;
 }
 
@@ -48,6 +47,19 @@ td {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.offerTr:hover {
+.buttonDetails {
+    cursor: pointer;
+    background-color: transparent; 
+    border: 2px solid var(--darkBlue);  
+    border-radius: 12px;         
+    color: var(--darkBlue);               
+    padding: 7px 18px;          
+    font-size: 16px;              
+    font-weight: bold;             
+    text-align: center;           
+    transition: background-color 0.3s ease, color 0.3s ease; /
+}
+
+.buttonDetails:hover {
     background-color: var(--hoverColor);
 }
