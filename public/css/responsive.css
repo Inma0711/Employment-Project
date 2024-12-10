@@ -1,0 +1,218 @@
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    header img {
+        width: 20%;
+        margin: 0 auto 10px auto;
+    }
+
+    header h1 {
+        font-size: 24px;
+        margin: 0;
+    }
+
+    table {
+        width: 385px;
+        margin-top: 20px;
+    }
+
+    thead {
+        display: block;
+        width: 385px;
+        padding: 0.4rem 0;
+        text-align: center;
+    }
+
+    tbody {
+        width: 385px;
+        display: block;
+        overflow-x: auto;
+    }
+
+    th,
+    td {
+        min-width: 55px;
+        padding: 10px;
+        padding: 0.4rem 0;
+
+        font-size: 14px;
+    }
+    th {
+        min-width: 62px;
+    }
+
+    .buttonDetails {
+        font-size: 14px;
+        padding: 5px 12px;
+    }
+
+    .offerInfo {
+        width: 80%;
+        padding: 1rem;
+    }
+
+    footer {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    footer img {
+        width: 40px;
+        height: 40px;
+    }
+
+    footer p {
+        font-size: 18px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .globalContainer {
+        width: 70%;
+        margin-top: 5%;
+    }
+
+    .titleOffer {
+        flex-direction: column;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .progressContainer {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .progressTr {
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 1rem 0;
+    }
+
+    .buttonProgress {
+        width: 80%;
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    .buttonContainer {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    #statusContainer {
+        width: 30%;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+    .alert {
+        font-size: 20px;
+    }
+
+    .thead {
+        display: block;
+        width: 100%;
+        padding: 0.4rem 0;
+        text-align: center;
+    }
+
+    .tbody {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .globalContainer {
+        width: 90%;
+        margin-top: 5%;
+    }
+
+    .titleOffer {
+        font-size: 18px;
+    }
+
+    .buttonProgress {
+        width: 70px;
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+
+    .statusContainer {
+        width: 100%;
+        font-size: 14px;
+        padding: 0.5rem;
+    }
+
+    .alert {
+        font-size: 18px;
+        margin: 10px;
+    }
+
+    header img {
+        width: 25%;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    th,
+    td {
+        font-size: 12px;
+    }
+
+    .offerInfo {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .buttonDetails {
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    footer p {
+        font-size: 13px;
+        margin-bottom: 3px;
+    }
+
+    footer img {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+}

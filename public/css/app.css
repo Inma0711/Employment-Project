@@ -2,6 +2,7 @@
 @import url(footer.css);
 @import url(home.css);
 @import url(show.css);
+@import url(responsive.css);
 :root {
   --darkBlue: #0b3146;
   --blue: #0a6f9a;
