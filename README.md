@@ -12,13 +12,15 @@ On entering the page we see a table where we can view each of the offers, where 
 
 Right next to it we have a button where we can access each of our offers and see if we have any comments added about how our offer is going, etc.
 
-![Home view](./public/docs/offerView.png)
 <p align="center"><em>Home view</em></p>
+
+![Home view](./public/docs/offerView.png)
 
 This is the main view where we see the table with offers.
 
-![Show view](./public/docs/showView.png)
 <p align="center"><em>Show view</em></p>
+
+![Show view](./public/docs/progressView.png)
 
 This is the secondary view where we see the table with the comments.
 
