@@ -16,7 +16,7 @@ class OfferFactory extends Factory
      */
     public function definition(): array
     {
-        static $id = 1; 
+        static $id = 1;
 
         return [
             'id' => $id++, 

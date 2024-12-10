@@ -1,39 +1,49 @@
 @extends('layouts.app')
 
 @section('content')
-    <a href="{{ route('home') }}">Back</a>
-    <div class="offerInfo">
-        <div>
-            <h3>{{ $offer->title }}</h3>
-            <h5>{{ $offer->company }}</h5>
-            <h5>{{ $offer->offerStatus }}</h5>
-        </div>
-    </div>
+    <div class="main">
+        <div class="globalContainer">
+            <div class="titleOffer">
+                <div class="titleCompany">
+                    <h3>{{ $offer->title }}</h3>
+                    <h5>{{ $offer->company }}</h5>
+                </div>
+                <div class="statusContainer" id="statusContainer">
+                    <h5>{{ $offer->offerStatus }}</h5>
+                </div>
+            </div>
 
-    <div class="offerProgress">
-        <table class="table table-bordered container" id="table">
-            <thead>
-                <tr>
-                    <th scope="col" id="headerTable">#</th>
-                    <th scope="col" id="headerTable">Date</th>
-                    <th scope="col" id="headerTable">Comment</th>
-                </tr>
-            </thead>
-            <tbody>
-                @if (!($offer->progresses)->isEmpty())
-                    @foreach ($offer->progresses as $progress)
+            <div class="progressContainer">
+                <table>
+                    <thead class="thead">
                         <tr>
-                            <td>{{ $progress->id }}</td>
-                            <td>{{ $progress->created_at }}</td>
-                            <td>{{ $progress->comentary }}</td>
+                            <th>#</th>
+                            <th>Fecha</th>
+                            <th>Comentario</th>
                         </tr>
-                    @endforeach
-                @else
-                    <tr>
-                        <td colspan="3">There's no progress yet</td>
-                    </tr>
-                @endif
-            </tbody>
-        </table>
+                    </thead>
+                    <tbody class="tbody">
+                        @if (!$offer->progresses->isEmpty())
+                            @foreach ($offer->progresses as $progress)
+                                <tr class="progressTr">
+                                    <td>{{ $progress->id }}</td>
+                                    <td>{{ $progress->created_at }}</td>
+                                    <td>{{ $progress->comentary }}</td>
+                                </tr>
+                            @endforeach
+                        @else
+                            <div class="alert">
+                                <p>No hay ningun comentario</p>
+                            </div>
+                        @endif
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="buttonContainer">
+            <a href="{{ route('home') }}">
+                <button type="button" class="buttonProgress">Volver</button>
+            </a>
+        </div>
     </div>
 @endsection

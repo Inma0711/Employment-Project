@@ -1,6 +1,7 @@
 @import url(header.css);
 @import url(footer.css);
 @import url(home.css);
+@import url(show.css);
 :root {
   --darkBlue: #0b3146;
   --blue: #0a6f9a;
