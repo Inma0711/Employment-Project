@@ -17,7 +17,7 @@ Right next to it we have a button where we can access each of our offers and see
 
 This is the main view where we see the table with offers.
 
-![Show view](./public/docs/progressView.png)
+![Show view](./public/docs/showView.png)
 <p align="center"><em>Show view</em></p>
 
 This is the secondary view where we see the table with the comments.
