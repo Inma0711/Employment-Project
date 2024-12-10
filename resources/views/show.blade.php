@@ -25,7 +25,7 @@
                         <tr>
                             <td>{{ $progress->id }}</td>
                             <td>{{ $progress->created_at }}</td>
-                            <td>{{ $progress->comment }}</td>
+                            <td>{{ $progress->comentary }}</td>
                         </tr>
                     @endforeach
                 @else
